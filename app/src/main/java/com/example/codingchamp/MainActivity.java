@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
             audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC), 0);
         }
 
+
 //        b1.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View view) {
@@ -71,7 +72,6 @@ public class MainActivity extends AppCompatActivity {
 //                b3.setCardBackgroundColor(Color.GREEN);
 //            }
 //        });
-
 
     }
 
