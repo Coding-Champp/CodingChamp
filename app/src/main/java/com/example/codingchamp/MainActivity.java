@@ -1,6 +1,7 @@
 package com.example.codingchamp;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -48,11 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
 
         arrayList = new ArrayList<>();
-        arrayList.add(new ModelClass("Who Invented Java", "James Gostling", "Atharv", "Niraj", "Omakr", "Atharv"));
-        arrayList.add(new ModelClass("Who Invented Python", "James Gostling", "MAne", "Niraj", "Omakr", "Niraj"));
-        arrayList.add(new ModelClass("Who Invented C", "James Gostling", "Ath", "Niraj", "Omakr", "Ath"));
-        arrayList.add(new ModelClass("Who Invented C++", "James Gostling", "Athy", "Niraj", "Omakr", "James Gostling"));
-        arrayList.add(new ModelClass("Who Invented JAVA", "James Gostling", "Athy MAne", "Niraj", "Omakr", "Omakr"));
+        arrayList.add(new ModelClass("What is the correct way to declare a variable in Java? ", "variable = 10;", "10 = variable;", "int variable = 10", "variable int = 10", "int variable = 10"));
+        arrayList.add(new ModelClass("Which statement is used to take input from the user in Java?", "System.out.println();", "System.in.read()", "readLine()", "Scanner sc = new Scanner(System.in);", "Scanner sc = new Scanner(System.in);"));
+        arrayList.add(new ModelClass("What is the correct way to declare a method that does not return any value in Java?", "void methodName() {}", "String methodName() {}", "methodName() {}", "int methodName() {}", "void methodName() {}"));
+        arrayList.add(new ModelClass("Which operator is used for logical 'AND' in Java?", "&", "|", "&&", "||", "&&"));
+        arrayList.add(new ModelClass("How do you print the Fibonacci sequence up to n terms in Java?", "Use a for loop to iterate over the sequence", "Use a while loop to iterate over the sequence", "Use a do-while loop to iterate over the sequence", "Use a recursive function to calculate the Fibonacci sequence", "Use a for loop to iterate over the sequence"));
+        arrayList.add(new ModelClass("Which loop is guaranteed to execute at least once in Java?", "for loop", "While loop", "switch loop", "do-while loop", "do-while loop"));
+        arrayList.add(new ModelClass("Which of the following is true about the break statement in a loop?", "It terminates the loop and continues with the next iteration.", "It is used to exit from a method.", "It is used to skip the rest of the code in the current iteration.", "It terminates the loop entirely.", "It terminates the loop entirely."));
 
         Collections.shuffle(arrayList);
         modelClass = arrayList.get(index);
@@ -80,14 +83,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (g1.getCheckedRadioButtonId() == R.id.a) {
                     if (modelClass.getA().equals(modelClass.getAns())) {
-                        Toast.makeText(MainActivity.this, "Right", Toast.LENGTH_SHORT).show();
                         correctAnswer++;
                     } else {
                         wrongAnwer++;
                     }
                 } else if (g1.getCheckedRadioButtonId() == R.id.b) {
                     if (modelClass.getB().equals(modelClass.getAns())) {
-                        Toast.makeText(MainActivity.this, "Right", Toast.LENGTH_SHORT).show();
                         correctAnswer++;
                     } else {
                         wrongAnwer++;
@@ -95,7 +96,6 @@ public class MainActivity extends AppCompatActivity {
 
                 } else if (g1.getCheckedRadioButtonId() == R.id.c) {
                     if (modelClass.getC().equals(modelClass.getAns())) {
-                        Toast.makeText(MainActivity.this, "Right", Toast.LENGTH_SHORT).show();
                         correctAnswer++;
                     } else {
                         wrongAnwer++;
@@ -103,7 +103,6 @@ public class MainActivity extends AppCompatActivity {
 
                 } else if (g1.getCheckedRadioButtonId() == R.id.d) {
                     if (modelClass.getD().equals(modelClass.getAns())) {
-                        Toast.makeText(MainActivity.this, "Right", Toast.LENGTH_SHORT).show();
                         correctAnswer++;
                     } else {
                         wrongAnwer++;
@@ -111,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
+                g1.clearCheck();
                 next();
             }
         });
@@ -176,7 +176,10 @@ public class MainActivity extends AppCompatActivity {
             modelClass = arrayList.get(index);
             setAllData();
         } else {
-            Toast.makeText(this, "Correct: " + correctAnswer + "\nWrong: " + wrongAnwer, Toast.LENGTH_SHORT).show();
+            Intent intent=new Intent(getApplicationContext(), Result.class);
+intent.putExtra("score",correctAnswer);
+startActivity(intent);
+
         }
     }
 }

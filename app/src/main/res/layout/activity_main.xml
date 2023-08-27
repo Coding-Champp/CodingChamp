@@ -26,7 +26,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
-                android:text="Who Invented Java"
+                android:padding="20dp"
+                android:text="Which statement is used to take input from the user in Java?"
                 android:textAlignment="center"
                 android:textColor="@color/black"
                 android:textSize="15dp" />
@@ -62,7 +63,7 @@
             android:button="@android:color/transparent"
             android:elevation="4dp"
             android:paddingHorizontal="20dp"
-            android:text="Ankur" />
+            android:text="Scanner sc = new Scanner(System.in);" />
 
         <RadioButton
             android:id="@+id/b"
