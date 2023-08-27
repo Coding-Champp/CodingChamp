@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        mediaPlayer = MediaPlayer.create(this, R.raw.hindicopy);
+        mediaPlayer = MediaPlayer.create(this, R.raw.alert);
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
         int currentRingerMode = audioManager.getRingerMode();
         if (currentRingerMode == AudioManager.RINGER_MODE_SILENT) {
