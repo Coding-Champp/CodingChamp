@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1088974632265",
+    "firebase_url": "https://champ-279ef-default-rtdb.firebaseio.com",
+    "project_id": "champ-279ef",
+    "storage_bucket": "champ-279ef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1088974632265:android:6b82e1582cf246c6ad9698",
+        "android_client_info": {
+          "package_name": "com.example.codingchamp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1088974632265-f0bd4jfiu6q7suup5vhhrg08pin7netb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAnk4kbWDCGEu8fSqYGogNy7Q21lpFLgG8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1088974632265-f0bd4jfiu6q7suup5vhhrg08pin7netb.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

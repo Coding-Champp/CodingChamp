@@ -176,9 +176,10 @@ public class MainActivity extends AppCompatActivity {
             modelClass = arrayList.get(index);
             setAllData();
         } else {
-            Intent intent=new Intent(getApplicationContext(), Result.class);
-intent.putExtra("score",correctAnswer);
-startActivity(intent);
+            Intent intent = new Intent(getApplicationContext(), Result.class);
+            intent.putExtra("Name", getIntent().getStringExtra("Name"));
+            intent.putExtra("score", correctAnswer);
+            startActivity(intent);
 
         }
     }
