@@ -56,6 +56,16 @@ public class MainActivity extends AppCompatActivity {
         arrayList.add(new ModelClass("How do you print the Fibonacci sequence up to n terms in Java?", "Use a for loop to iterate over the sequence", "Use a while loop to iterate over the sequence", "Use a do-while loop to iterate over the sequence", "Use a recursive function to calculate the Fibonacci sequence", "Use a for loop to iterate over the sequence"));
         arrayList.add(new ModelClass("Which loop is guaranteed to execute at least once in Java?", "for loop", "While loop", "switch loop", "do-while loop", "do-while loop"));
         arrayList.add(new ModelClass("Which of the following is true about the break statement in a loop?", "It terminates the loop and continues with the next iteration.", "It is used to exit from a method.", "It is used to skip the rest of the code in the current iteration.", "It terminates the loop entirely.", "It terminates the loop entirely."));
+        arrayList.add(new ModelClass("Number of primitive data types in Java are?", "6", "7", "8", "9", "8"));
+        arrayList.add(new ModelClass("Arrays in java are?", "Object Reference", "Objects", "primitive Data Types", "None", "Objects"));
+        arrayList.add(new ModelClass("Identify the modifier which cannot be used for constructor.", "Public", "Protected", "Static", "Private", "Static"));
+        arrayList.add(new ModelClass("Identify the correct way of declaring constructor.", "JSPM(){}", "Public JSPM(){}", "JSPM(void){}", "Both (A) and (B)", "Both (A) and (B)"));
+        arrayList.add(new ModelClass("Exception created by try block is caught in which block", "Final", "Catch", "Throw", "None", "Catch"));
+        arrayList.add(new ModelClass("What is the extension of java code files?", ".js", ".class", ".java", ".txt", ".java"));
+        arrayList.add(new ModelClass("Which one of the following is not an access modifier?", "Protected", "Void", "Public", "Private", "Void"));
+        arrayList.add(new ModelClass("On which platforms Java runs?", "Windows", "MAC OS", "LINUX", "All of the above", "All of the above"));
+        arrayList.add(new ModelClass("Which package contains the Scanner class?", "java.util package", "java.lang package", "java.awt package", "java.io package", "java.util package"));
+
 
         Collections.shuffle(arrayList);
         modelClass = arrayList.get(index);
