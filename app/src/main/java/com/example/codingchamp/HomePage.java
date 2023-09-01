@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -20,9 +21,16 @@ EditText e1;
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),MainActivity.class);
-                intent.putExtra("Name",e1.getText().toString());
-                startActivity(intent);
+                if(TextUtils.isEmpty(e1.getText().toString()))
+                {
+                    e1.setError("UserName Cannot be Empty");
+                }
+                else {
+                    Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                    intent.putExtra("Name",e1.getText().toString());
+                    startActivity(intent);
+                }
+
             }
         });
     }
