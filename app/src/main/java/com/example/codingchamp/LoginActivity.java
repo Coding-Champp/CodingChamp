@@ -26,9 +26,10 @@ public class LoginActivity extends AppCompatActivity {
                     e1.setError("UserName Cannot be Empty");
                 }
                 else {
-                    Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                    Intent intent=new Intent(getApplicationContext(),HomePage.class);
                     intent.putExtra("Name",e1.getText().toString());
                     startActivity(intent);
+                    finish();
                 }
 
             }
