@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     private boolean isAppReopened = false;
     private MediaPlayer mediaPlayer;
     RadioGroup g1;
+    public static int result;
     TextView question;
     RadioButton rb1, rb2, rb3, rb4;
     CountDownTimer timer;
@@ -178,18 +179,19 @@ public class MainActivity extends AppCompatActivity {
             isAppReopened = true;
         }
     }
-
-
     public void next() {
         if (index < arrayList.size() - 1) {
             index++;
             modelClass = arrayList.get(index);
             setAllData();
+            result=0;
         } else {
             Intent intent = new Intent(getApplicationContext(), Result.class);
             intent.putExtra("Name", getIntent().getStringExtra("Name"));
             intent.putExtra("score", correctAnswer);
             startActivity(intent);
+            finish();
+            result=1;
 
         }
     }
