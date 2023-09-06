@@ -20,7 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.ArrayList;
 import java.util.Collections;
 
-public class MainActivity extends AppCompatActivity {
+public class Round1 extends AppCompatActivity {
 
     private boolean isAppReopened = false;
     private MediaPlayer mediaPlayer;
@@ -81,7 +81,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onFinish() {
-                Toast.makeText(MainActivity.this, "You have Been Eliminated from the game", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Round1.this, "You have Been Eliminated from the game", Toast.LENGTH_SHORT).show();
             }
         }.start();
 

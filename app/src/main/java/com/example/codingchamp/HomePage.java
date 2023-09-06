@@ -6,10 +6,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.text.TextUtils;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -28,18 +25,28 @@ RelativeLayout r1,r2,r3;
         c1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent=new Intent(getApplicationContext(),MainActivity.class);
+                Intent intent=new Intent(getApplicationContext(), Round1.class);
                 intent.putExtra("Name", getIntent().getStringExtra("Name"));
                 startActivity(intent);
             }
         });
-
+        c2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(c1.isClickable()==false)
+                {
+                    
+                }else {
+                    Toast.makeText(HomePage.this, "Please Complete Round1 first", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
 
     @Override
     protected void onResume() {
-        if(MainActivity.result==1)
+        if(Round1.result==1)
         {
             c1.setClickable(false);
             Toast.makeText(this, "Round 1 Completed", Toast.LENGTH_SHORT).show();
