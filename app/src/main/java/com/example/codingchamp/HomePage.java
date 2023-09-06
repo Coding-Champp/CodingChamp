@@ -35,7 +35,18 @@ RelativeLayout r1,r2,r3;
             public void onClick(View view) {
                 if(c1.isClickable()==false)
                 {
-                    
+                    Toast.makeText(HomePage.this, "For now this feature is not available", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(HomePage.this, "Please Complete Round1 first", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        c3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if((c1.isClickable()==false)&&(c2.isClickable()==false))
+                {
+                    Toast.makeText(HomePage.this, "For now this feature is not available", Toast.LENGTH_SHORT).show();
                 }else {
                     Toast.makeText(HomePage.this, "Please Complete Round1 first", Toast.LENGTH_SHORT).show();
                 }
