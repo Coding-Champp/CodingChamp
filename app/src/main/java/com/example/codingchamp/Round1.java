@@ -50,7 +50,7 @@ public class Round1 extends AppCompatActivity {
 
 
         arrayList = new ArrayList<>();
-        arrayList.add(new ModelClass("What is the correct way to declare a variable in Java? ", "variable = 10;", "10 = variable;", "int variable = 10", "variable int = 10", "int variable = 10"));
+        arrayList.add(new ModelClass("What is the correct way to declare a variable in Java? ", "variable = 10;", "10 = variable;", "int variable = 10;", "variable int = 10", "int variable = 10"));
         arrayList.add(new ModelClass("Which statement is used to take input from the user in Java?", "System.out.println();", "System.in.read()", "readLine()", "Scanner sc = new Scanner(System.in);", "Scanner sc = new Scanner(System.in);"));
         arrayList.add(new ModelClass("What is the correct way to declare a method that does not return any value in Java?", "void methodName() {}", "String methodName() {}", "methodName() {}", "int methodName() {}", "void methodName() {}"));
         arrayList.add(new ModelClass("Which operator is used for logical 'AND' in Java?", "&", "|", "&&", "||", "&&"));
